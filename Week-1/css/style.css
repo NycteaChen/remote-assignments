@@ -1,0 +1,290 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Microsoft JhengHei';
+	line-height: 1.6;
+    margin:0;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+}
+
+
+h2, h3{
+	color: #093a58;
+    margin-top: 0;
+}
+
+h2{
+    text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+img {
+	max-width: 100%;
+}
+
+
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name { 
+  font-size: 1.25em;
+  margin:0 ; /*消除預設邊框*/
+}
+
+.name a{color:#fff}
+
+.main-nav {
+  margin-top:5px;
+  list-style-type: none;
+  padding-left:0;
+}
+
+.name a,
+.main-nav a {
+    text-align: center;
+    display:block;
+    padding: 10px 15px;
+}
+
+.main-nav a {
+	font-size: .95em;
+	color: #fff;
+}
+
+.main-nav a:hover {
+	color:#ADFFFF;
+}
+
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+    padding-top:.5em;
+    padding-bottom:.5em;
+    background:#002B4D;
+  }
+  
+  .banner, .main-footer {
+    text-align:center;
+  }
+    
+
+.banner {
+    color: #fff;
+    height:600px;
+    text-shadow: 2px 2px 2px #093a58;
+    width: 100%;
+    padding-top:16em;
+    margin-bottom:60px;
+    background: no-repeat center;
+    background-size: cover;
+}
+  
+.col{
+    padding:1em;
+}
+
+.plate {
+    display: inline-block;
+    background:#093a58;
+    color:#fff;
+    padding: 10px;
+    border-radius: 10px;
+    transition:opacity 0.5s ease-out;
+}
+.plate:hover{
+    opacity: .7;
+    transition:opacity 0.5s ease-in;
+}
+
+
+  
+  .main-footer {
+      background: #002B4D;
+      color:#fff;
+      padding: 2em 0;
+      margin-top: 30px;
+      font-size:.8em;
+  }
+  
+  /* ---- Page Elements ---- */
+
+  .headline {
+    margin-bottom:0; /*減少跟tagline的距離*/
+  }
+
+  
+  /* ================================= 
+    Media Queries
+  ==================================== */
+
+
+/*Layout when screen width > 1200px max-width:1200px */
+
+@media (min-width: 1200px){
+
+    .topnav, .main-nav, .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin:auto;
+        max-width: 1200px;
+    }
+
+
+
+    .col {
+        flex:1 50%;
+    }
+
+}
+
+/*Layout when screen width > 800px, <1200px*/
+
+@media (min-width: 800px) and (max-width:1199px){
+
+
+    .topnav, .main-nav{
+        display: flex;
+        flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+    .container{
+        margin:auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    .col {
+        flex:1 50%;
+    }
+
+}
+
+
+
+
+/*Layout when screen width > 500px and <800px*/
+
+@media (min-width: 500px) and (max-width: 799px){
+
+
+    /*menu trigger*/
+    .topnav {
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .topnav #myLinks {
+        display: none;
+      }
+      
+      .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+      }
+      
+      .topnav a.icon {
+        background: gray;
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+      }
+      
+      .main-nav a:hover, a.icon:hover {
+        background-color: #87CEEB;
+        color:#FFF
+      }
+      
+      /*container*/
+      .container {
+            margin:auto;
+          display: flex;
+          flex-wrap: wrap;
+          width: 80%;
+      }
+
+      .col {
+          flex:1 50%;
+      }
+      
+
+
+
+
+
+}
+
+/*Layout when screen width<500px*/
+
+@media (max-width: 499px){
+
+
+    
+    /*menu trigger*/
+    .topnav {
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .topnav #myLinks {
+        display: none;
+      }
+      
+      .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+      }
+      
+      .topnav a.icon {
+        background: gray;
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+      }
+      
+      .main-nav a:hover, a.icon:hover {
+        background-color: #87CEEB;
+        color:#FFF
+      }
+      
+      /*container*/
+      .container{
+          display:block;
+      }
+
+}
+
+     /* .clearfix::after {
+        content:"";
+        display:table;
+        clear:both;
+    
+      } */
