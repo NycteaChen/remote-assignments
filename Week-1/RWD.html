@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <link rel="stylesheet"  type='text/css' href="css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <title>營養食光</title>
     </head>
 
@@ -17,15 +18,18 @@
                     <li><a href="article">營養好文</a></li>
                     <li><a href="contact">聯絡方式</a></li>
                 </ul>
+            </div>
+            <div class="menu"> 
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
+                <i class="fa fa-bars"></i>
                 </a>
             </div>
+                
         </header><!--/.main-header-->   
 
 
 
-        <div class="banner" style="background-image:url('img/food-banner.jpg');width:100%">
+        <div class="banner">
             <h1 class="headline">歡迎來到營養食光</h1>
             <span class="tagline">專業營養團隊為您打造健康身體</span>
         </div><!--/.banner-->
@@ -74,12 +78,14 @@
         <script>
             function myFunction() {
               var x = document.getElementById("myLinks");
-              if (x.style.display === "block") {
-                x.style.display = "none";
-              } else {
-                x.style.display = "block";
-              }
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
             }
+
+
         </script>
     </body>
 </html>

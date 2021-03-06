@@ -5,7 +5,8 @@
 body {
 	font-family: 'Microsoft JhengHei';
 	line-height: 1.6;
-    margin:0;
+  margin: 0; 
+  padding: 0;
 }
 
 p {
@@ -13,21 +14,22 @@ p {
 	margin-bottom: 1.8em;
 }
 
-
 h2, h3{
 	color: #093a58;
     margin-top: 0;
 }
 
-h2{
-    text-align: center;
+.main-header, h2,.topnav a, .banner, .main-footer{
+  text-align: center;
+}
+
+ul {
+  list-style: none;
 }
 
 a {
 	text-decoration: none;
 }
-
-
 
 img {
 	max-width: 100%;
@@ -35,124 +37,125 @@ img {
 
 
 
-
-/* ================================= 
-  Base Layout Styles
-==================================== */
-
-/* ---- Navigation ---- */
-
-.name { 
-  font-size: 1.25em;
-  margin:0 ; /*消除預設邊框*/
+/* header */
+.main-header {
+  padding-top:.5em;
+  /* padding-bottom:.5em; */
+  background:#002B4D;
 }
 
-.name a{color:#fff}
+
+.topnav a {
+  color: white;
+  padding: 10px 15px;
+  display: block;
+}
+
 
 .main-nav {
   margin-top:5px;
-  list-style-type: none;
   padding-left:0;
 }
 
-.name a,
-.main-nav a {
-    text-align: center;
-    display:block;
-    padding: 10px 15px;
+.main-nav a:hover{
+  color:#ADFFFF;
 }
 
-.main-nav a {
-	font-size: .95em;
-	color: #fff;
-}
-
-.main-nav a:hover {
-	color:#ADFFFF;
-}
-
-
-/* ---- Layout Containers ---- */
-
-.main-header {
-    padding-top:.5em;
-    padding-bottom:.5em;
-    background:#002B4D;
-  }
+.main-nav li {
+  display: inline-block;
   
-  .banner, .main-footer {
-    text-align:center;
-  }
-    
+}
+
+.name, .main-nav{
+  display: inline-block;
+}
+
+
+.menu i{
+  display: inline-block;
+  position: absolute;
+  top:53px;
+  right:1%
+}
+
+
+
+/* banner*/
 
 .banner {
-    color: #fff;
-    height:600px;
-    text-shadow: 2px 2px 2px #093a58;
-    width: 100%;
-    padding-top:16em;
-    margin-bottom:60px;
-    background: no-repeat center;
-    background-size: cover;
+  background:center / cover no-repeat url('../img/food-banner.jpg');
+  width:100%;
+  height:600px;
+  color: #fff;
+  text-shadow: 2px 2px 2px #093a58;
+  padding-top:16em;
+  margin-bottom:60px;
 }
-  
+
+.headline {
+  margin-bottom:0; /*減少跟tagline的距離*/
+}
+
+
+
+/*container*/
+
+
 .col{
-    padding:1em;
+  padding:1em;
 }
 
 .plate {
-    display: inline-block;
-    background:#093a58;
-    color:#fff;
-    padding: 10px;
-    border-radius: 10px;
-    transition:opacity 0.5s ease-out;
+  display: inline-block;
+  background:#093a58;
+  color:#fff;
+  padding: 10px;
+  border-radius: 10px;
+  transition:opacity 0.5s ease-out;
 }
 .plate:hover{
-    opacity: .7;
-    transition:opacity 0.5s ease-in;
+  opacity: .7;
+  transition:opacity 0.5s ease-in;
 }
 
 
-  
-  .main-footer {
-      background: #002B4D;
-      color:#fff;
-      padding: 2em 0;
-      margin-top: 30px;
-      font-size:.8em;
-  }
-  
-  /* ---- Page Elements ---- */
-
-  .headline {
-    margin-bottom:0; /*減少跟tagline的距離*/
-  }
-
-  
-  /* ================================= 
-    Media Queries
-  ==================================== */
+/*footer*/
+.main-footer {
+  background: #002B4D;
+  color:#fff;
+  padding: 2em 0;
+  margin-top: 30px;
+  font-size:.8em;
+}
 
 
 /*Layout when screen width > 1200px max-width:1200px */
 
 @media (min-width: 1200px){
 
-    .topnav, .main-nav, .container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin:auto;
-        max-width: 1200px;
-    }
+  .topnav {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      margin:auto;
+      max-width: 1200px;
+  }
 
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin:auto;
+    max-width: 1200px;
+  }
+  .col {
+      flex:1 50%;
+  }
 
-
-    .col {
-        flex:1 50%;
-    }
-
+  .icon i{
+    display: none;
+  }
 }
 
 /*Layout when screen width > 800px, <1200px*/
@@ -160,12 +163,14 @@ img {
 @media (min-width: 800px) and (max-width:1199px){
 
 
-    .topnav, .main-nav{
-        display: flex;
-        flex-wrap: wrap;
-		flex-direction: row;
-		justify-content: space-between;
-	}
+  .topnav{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:auto 12px;
+    max-width: 1199x;
+  }
 
     .container{
         margin:auto;
@@ -177,6 +182,10 @@ img {
     .col {
         flex:1 50%;
     }
+    
+  .icon i{
+    display: none;
+  }
 
 }
 
@@ -198,27 +207,46 @@ img {
         display: none;
       }
       
-      .topnav a {
+      .main-header a {
         color: white;
         padding: 14px 16px;
         text-decoration: none;
         font-size: 17px;
         display: block;
       }
+
+      .name a {
+        font-size: 25px;
+      }
+
       
-      .topnav a.icon {
+      .icon {
         background: gray;
+        border-radius: 5px;
         display: block;
         position: absolute;
-        right: 20px;
-        top: 10px;
+        right: 5%;
+        top: 50px;
       }
+
+      .icon i{
+        position: absolute;
+        top:6px;
+        right:8px;
+      }
+
       
       .main-nav a:hover, a.icon:hover {
         background-color: #87CEEB;
         color:#FFF
       }
       
+
+      .main-nav li {
+        display: block;
+        
+      }
+
       /*container*/
       .container {
             margin:auto;
@@ -246,34 +274,65 @@ img {
     
     /*menu trigger*/
     .topnav {
-        overflow: hidden;
-        position: relative;
-      }
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .topnav #myLinks {
+      display: none;
+    }
+    
+    .main-header a {
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      display: block;
+    }
+
+    .name a {
+      font-size: 25px;
+    }
+
+    
+    .icon {
+      background: gray;
+      border-radius: 5px;
+      display: block;
+      position: absolute;
+      right: 5%;
+      top: 50px;
+    }
+
+    .icon i{
+      position: absolute;
+      top:6px;
+      right:8px;
+    }
+
+    
+    .main-nav a:hover, a.icon:hover {
+      background-color: #87CEEB;
+      color:#FFF
+    }
+    
+
+    .main-nav li {
+      display: block;
       
-      .topnav #myLinks {
-        display: none;
-      }
-      
-      .topnav a {
-        color: white;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        display: block;
-      }
-      
-      .topnav a.icon {
-        background: gray;
-        display: block;
-        position: absolute;
-        right: 20px;
-        top: 10px;
-      }
-      
-      .main-nav a:hover, a.icon:hover {
-        background-color: #87CEEB;
-        color:#FFF
-      }
+    }
+
+    /*container*/
+    .container {
+          margin:auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+    }
+
+    .col {
+        flex:1 50%;
+    }
       
       /*container*/
       .container{
@@ -281,10 +340,3 @@ img {
       }
 
 }
-
-     /* .clearfix::after {
-        content:"";
-        display:table;
-        clear:both;
-    
-      } */
