@@ -16,6 +16,19 @@ welcome.addEventListener( 'click', () => {
 
 
 
+
+//  Show More Content Boxes
+
+buttonMore.addEventListener( 'click', () => {
+    if ( hiddenContainer.style.display === "none"){
+        hiddenContainer.style.display = "flex";
+    } else{
+        hiddenContainer.style.display = "none"; 
+    }
+})
+
+
+
 // Close menu 
 
 close.addEventListener( 'click', () => {
@@ -39,19 +52,6 @@ function myFunction() {
       }
 }
 
-
-
-
-
-//  Show More Content Boxes
-
-buttonMore.addEventListener( 'click', () => {
-    if ( hiddenContainer.style.display === "none"){
-        hiddenContainer.style.display = "flex";
-    } else{
-        hiddenContainer.style.display = "none"; 
-    }
-})
 
 
 
