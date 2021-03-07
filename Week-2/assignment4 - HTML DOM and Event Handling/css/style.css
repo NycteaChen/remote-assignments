@@ -275,18 +275,6 @@ button#more:active{
     display: none;
   }
 
-  /*.mobile-menu{
-    min-height:100vh; /*填滿畫面 並用fix
-    position:fixed ;
-    width: 50%;
-    top:0;
-    right:0;
-    margin:0;
-    background-color: #fffbf5;
-    z-index: 100;
-  }*/
-
-
 }
 
 /*Layout when screen width > 800px, <1200px*/
