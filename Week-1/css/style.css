@@ -19,7 +19,7 @@ h2, h3{
     margin-top: 0;
 }
 
-.main-header, h2,.topnav a, .banner, .main-footer{
+.main-header, h2, .banner, .main-footer{
   text-align: center;
 }
 
@@ -40,7 +40,6 @@ img {
 /* header */
 .main-header {
   padding-top:.5em;
-  /* padding-bottom:.5em; */
   background:#002B4D;
 }
 
@@ -66,9 +65,7 @@ img {
   
 }
 
-.name, .main-nav{
-  display: inline-block;
-}
+
 
 
 .menu i{
@@ -156,6 +153,10 @@ img {
   .icon i{
     display: none;
   }
+  .mobile-menu li {
+    display: none;
+    
+  }
 }
 
 /*Layout when screen width > 800px, <1200px*/
@@ -169,7 +170,6 @@ img {
     flex-direction: row;
     justify-content: space-between;
     margin:auto 12px;
-    max-width: 1199x;
   }
 
     .container{
@@ -186,7 +186,10 @@ img {
   .icon i{
     display: none;
   }
-
+  .mobile-menu li {
+    display: none;
+    
+  }
 }
 
 
@@ -201,9 +204,83 @@ img {
     .topnav {
         overflow: hidden;
         position: relative;
+
       }
       
-      .topnav #myLinks {
+      .topnav #mobile,.main-nav .wideScreen {
+        display: none;
+      }
+
+      .main-header a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+      }
+
+      .name a {
+        font-size: 25px;
+      }
+
+      
+      .icon {
+        background: gray;
+        border-radius: 5px;
+        display: block;
+        position: absolute;
+        right: 5%;
+        top: 50px;
+      }
+
+      .icon i{
+        position: absolute;
+        top:6px;
+        right:8px;
+      }
+
+      
+      .mobile-menu, .name{
+        display: block;
+      }
+      
+      .mobile-menu li {
+        display: block; 
+      }
+    
+      /*container*/
+      .container {
+            margin:auto;
+          display: flex;
+          flex-wrap: wrap;
+          width: 80%;
+      }
+
+      .col {
+          flex:1 50%;
+      }
+      
+
+
+
+
+
+}
+
+/*Layout when screen width<500px*/
+
+@media (max-width: 499px){
+
+
+    
+    /*menu trigger*/
+    .topnav {
+        overflow: hidden;
+        position: relative;
+
+      }
+      
+      .topnav #mobile,.main-nav .wideScreen {
         display: none;
       }
       
@@ -236,104 +313,13 @@ img {
       }
 
       
-      .main-nav a:hover, a.icon:hover {
-        background-color: #87CEEB;
-        color:#FFF
-      }
-      
-
-      .main-nav li {
+      .mobile-menu, .name{
         display: block;
-        
-      }
-
-      /*container*/
-      .container {
-            margin:auto;
-          display: flex;
-          flex-wrap: wrap;
-          width: 80%;
-      }
-
-      .col {
-          flex:1 50%;
       }
       
-
-
-
-
-
-}
-
-/*Layout when screen width<500px*/
-
-@media (max-width: 499px){
-
-
-    
-    /*menu trigger*/
-    .topnav {
-      overflow: hidden;
-      position: relative;
-    }
-    
-    .topnav #myLinks {
-      display: none;
-    }
-    
-    .main-header a {
-      color: white;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 17px;
-      display: block;
-    }
-
-    .name a {
-      font-size: 25px;
-    }
-
-    
-    .icon {
-      background: gray;
-      border-radius: 5px;
-      display: block;
-      position: absolute;
-      right: 5%;
-      top: 50px;
-    }
-
-    .icon i{
-      position: absolute;
-      top:6px;
-      right:8px;
-    }
-
-    
-    .main-nav a:hover, a.icon:hover {
-      background-color: #87CEEB;
-      color:#FFF
-    }
-    
-
-    .main-nav li {
-      display: block;
-      
-    }
-
-    /*container*/
-    .container {
-          margin:auto;
-        display: flex;
-        flex-wrap: wrap;
-        width: 80%;
-    }
-
-    .col {
-        flex:1 50%;
-    }
-      
+      .mobile-menu li {
+        display: block; 
+      }
       /*container*/
       .container{
           display:block;

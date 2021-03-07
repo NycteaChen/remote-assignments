@@ -12,11 +12,17 @@
         <header class="main-header">
             <div class="topnav">   
                 <h1 class="name"><a href="home">營養食光</a></h1>
-                <ul class="main-nav" id="myLinks">
-                    <li><a href="ideal">食光理念</a></li>
-                    <li><a href="about">關於我們</a></li>
-                    <li><a href="article">營養好文</a></li>
-                    <li><a href="contact">聯絡方式</a></li>
+                <ul class="main-nav">
+                    <li><a href="ideal" class="wideScreen">食光理念</a></li>
+                    <li><a href="about" class="wideScreen">關於我們</a></li>
+                    <li><a href="article" class="wideScreen">營養好文</a></li>
+                    <li><a href="contact" class="wideScreen">聯絡方式</a></li>
+                    <span class="mobile-menu" id="mobile">
+                        <li><a href="ideal">食光理念</a></li>
+                        <li><a href="about">關於我們</a></li>
+                        <li><a href="article">營養好文</a></li>
+                        <li><a href="contact">聯絡方式</a></li>
+                    </span>
                 </ul>
             </div>
             <div class="menu"> 
@@ -36,7 +42,7 @@
         <h2>您或許會感興趣．．．．．．</h2>
         <div class="container">
             
-            <div class="item1 col">
+            <div class="col">
                 <img class="health" src="img/health.jpg" alt="health-dietary">
                 <h3>養成健康身體</h3>
                 <p>為使營養均衡，應依「每日飲食指南」的食物分類與建議份量，選擇食物搭配飲食!</p>
@@ -44,7 +50,7 @@
                 <p>除了飲食之外，維持健康必須每日應有充分之身體活動，維持健康體位，並可藉此增加熱量消耗，達成熱量平衡及良好的體重管理。</p>
             </div><!--/.item1-->
             
-            <div class="item2 col">
+            <div class=" col">
                 <img class="health" src="img/food.jpg" alt="food-ingredients">
                 <h3>食物選擇小撇步</h3>
                 
@@ -53,7 +59,7 @@
                 <p>購買與製備餐飲，應注意份量、來源標示，盡量避免高熱量密度食物，如油炸與其他高脂高糖的食物。</p>
             </div><!--/.item2-->
             
-            <div class="item3 col">
+            <div class="col">
                 <img class="health" src="img/myplate.jpg" alt="myplate">
                 <h3>我的餐盤</h3>
                 <p>檢視大多數人的餐盤，隱藏著三高的危機，高鈉、高油、高糖，還有著低纖的隱憂，這讓我們處在營養不均衡、慢性病的威脅中。</p>
@@ -61,7 +67,7 @@
                 <p><a href="https://www.hpa.gov.tw/File/Attach/10415/File_11872.pdf" class="plate">趕緊來瞧一瞧吧！</a></p>
             </div><!--/.item3-->	
 
-            <div class="item4 col">
+            <div class="col">
                 <img class="health" src="img/sport.jpg" alt="exercise">
                 <h3>運動好處多</h3>
                 <p>近年來，職場久坐大大降低了身體活動量，進而提昇了罹患慢性疾病的風險，並造成認知功能的降低和心理的不安。</p>
@@ -77,7 +83,7 @@
         </footer>
         <script>
             function myFunction() {
-              var x = document.getElementById("myLinks");
+              var x = document.getElementById("mobile");
                 if (x.style.display === "block") {
                     x.style.display = "none";
                 } else {
