@@ -57,11 +57,7 @@ img {
 }
 
 .main-nav a:hover{
-<<<<<<< HEAD
   color:#75ccff;
-=======
-  color:#ADFFFF;
->>>>>>> 0ce05aae8c49e89d50586e14237fdd8de289508f
 }
 
 .main-nav li {
@@ -229,17 +225,13 @@ img {
 
       
       .icon {
-<<<<<<< HEAD
         width:48px;
         height:42px;
-=======
->>>>>>> 0ce05aae8c49e89d50586e14237fdd8de289508f
         background: gray;
         border-radius: 5px;
         display: block;
         position: absolute;
         right: 5%;
-<<<<<<< HEAD
         top: 35px;
       }
 
@@ -257,20 +249,6 @@ img {
       
       .name a{
         display: inline;
-=======
-        top: 50px;
-      }
-
-      .icon i{
-        position: absolute;
-        top:6px;
-        right:8px;
-      }
-
-      
-      .mobile-menu, .name{
-        display: block;
->>>>>>> 0ce05aae8c49e89d50586e14237fdd8de289508f
       }
       
       .mobile-menu li {
@@ -327,17 +305,13 @@ img {
 
       
       .icon {
-<<<<<<< HEAD
         width:48px;
         height:42px;
-=======
->>>>>>> 0ce05aae8c49e89d50586e14237fdd8de289508f
         background: gray;
         border-radius: 5px;
         display: block;
         position: absolute;
         right: 5%;
-<<<<<<< HEAD
         top: 35px;
       }
 
@@ -355,20 +329,6 @@ img {
       
       .name a{
         display: inline;
-=======
-        top: 50px;
-      }
-
-      .icon i{
-        position: absolute;
-        top:6px;
-        right:8px;
-      }
-
-      
-      .mobile-menu, .name{
-        display: block;
->>>>>>> 0ce05aae8c49e89d50586e14237fdd8de289508f
       }
       
       .mobile-menu li {
