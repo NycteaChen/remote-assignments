@@ -1,0 +1,9 @@
+doctype html
+html(lang="en")
+  head
+    title Homework
+  body
+    block content
+        h2 Hello! #{name}!
+        form(action='/clearName' method='post')
+          button(type='submit') clear name
