@@ -1,29 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function(){
-                if(xhr.readyState === 4 && xhr.status === 200) {
-                    let numberHTML = xhr.responseText;
-                    document.getElementById('sumHTML').innerHTML = numberHTML;
-                }
-            }
-            xhr.open('GET', 'http://localhost:3000/getData?number=10')
-            xhr.send();
-        </script>
+        <title>sum</title>
+        <script src="js/xhr.js"></script>
     </head>
-
     <body>
         <div id="sumHTML"></div>
-        <form action="/sum" method='post'>
-            <label>Please choose a number:</label><br>
-            <input type="number" name="number">
-            <button type="submit">Sumnit</button>
-        </form>
-    <script>
+        <hr/>
+        <div id="getNumber"></div>
 
-    </script>
+        <label>Please choose a number:</label><br>
+        <input type="number" id="number"/>
+        <button type="submit" onClick="getSum()">Submit</button>
+        <button type="submit" onClick="remove()">Remove</button>
+
     </body>
 
 </html>

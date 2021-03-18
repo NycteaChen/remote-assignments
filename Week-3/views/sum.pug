@@ -1,9 +1,0 @@
-extends layout.pug
-
-block content
-    if sum
-      h2 You got #{sum}!
-    else 
-      h2 Please enter the positive integer.
-    form(action='/goodbye', method='post')
-      button(type='submit') goodbye
