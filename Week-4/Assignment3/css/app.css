@@ -354,7 +354,7 @@ button#more:active{
           flex:1 50%;
       }
       h2 {
-        font-size: 20px;
+        font-size: smaller;
       }
       /*footer*/
       .main-footer {
